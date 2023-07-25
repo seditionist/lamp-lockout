@@ -25,8 +25,7 @@ import java.util.Set;
 @PluginDescriptor(
 	name = "Lamp Lockout",
 	description = "Remove skill options from lamp interface.",
-	tags = { "lamp", "lamps", "xp" },
-	enabledByDefault = false
+	tags = { "lamp", "lamps", "xp" }
 )
 public class LampLockoutPlugin extends Plugin
 {
