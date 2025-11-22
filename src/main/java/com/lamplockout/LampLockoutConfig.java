@@ -118,6 +118,14 @@ public interface LampLockoutConfig extends Config
 	default boolean enableFletching() { return false; }
 
 	@ConfigItem(
+			keyName = LampLockoutPlugin.ENABLE_SAILING,
+			name = "Allow Sailing",
+			description = "",
+			section = membersSection
+	)
+	default boolean enableSailing() { return false; }
+
+	@ConfigItem(
 			keyName = LampLockoutPlugin.ENABLE_SLAYER,
 			name = "Allow Slayer",
 			description = "",

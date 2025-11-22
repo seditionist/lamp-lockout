@@ -32,28 +32,31 @@ public class LampLockoutPlugin extends Plugin
 	static final String CONFIG_GROUP = "Lamp-Lockout";
 
 	static final String ENABLE_ATTACK = "enableAttack";
-	static final String ENABLE_DEFENCE = "enableDefence";
 	static final String ENABLE_STRENGTH = "enableStrength";
-	static final String ENABLE_HITPOINTS = "enableHitpoints";
+	static final String ENABLE_DEFENCE = "enableDefence";
 	static final String ENABLE_RANGED = "enableRanged";
-	static final String ENABLE_PRAYER = "enablePrayer";
 	static final String ENABLE_MAGIC = "enableMagic";
-	static final String ENABLE_COOKING = "enableCooking";
-	static final String ENABLE_WOODCUTTING = "enableWoodcutting";
-	static final String ENABLE_FLETCHING = "enableFletching";
-	static final String ENABLE_FISHING = "enableFishing";
-	static final String ENABLE_FIREMAKING = "enableFiremaking";
-	static final String ENABLE_CRAFTING = "enableCrafting";
-	static final String ENABLE_SMITHING = "enableSmithing";
-	static final String ENABLE_MINING = "enableMining";
-	static final String ENABLE_HERBLORE = "enableHerblore";
+	static final String ENABLE_PRAYER = "enablePrayer";
+	static final String ENABLE_HITPOINTS = "enableHitpoints";
+
 	static final String ENABLE_AGILITY = "enableAgility";
-	static final String ENABLE_THIEVING = "enableThieving";
-	static final String ENABLE_SLAYER = "enableSlayer";
-	static final String ENABLE_FARMING = "enableFarming";
-	static final String ENABLE_RUNECRAFT = "enableRunecraft";
-	static final String ENABLE_HUNTER = "enableHunter";
 	static final String ENABLE_CONSTRUCTION = "enableConstruction";
+	static final String ENABLE_FARMING = "enableFarming";
+	static final String ENABLE_FLETCHING = "enableFletching";
+	static final String ENABLE_HERBLORE = "enableHerblore";
+	static final String ENABLE_HUNTER = "enableHunter";
+	static final String ENABLE_SAILING = "enableSailing";
+	static final String ENABLE_SLAYER = "enableSlayer";
+	static final String ENABLE_THIEVING = "enableThieving";
+
+	static final String ENABLE_COOKING = "enableCooking";
+	static final String ENABLE_CRAFTING = "enableCrafting";
+	static final String ENABLE_FIREMAKING = "enableFiremaking";
+	static final String ENABLE_FISHING = "enableFishing";
+	static final String ENABLE_MINING = "enableMining";
+	static final String ENABLE_RUNECRAFT = "enableRunecraft";
+	static final String ENABLE_SMITHING = "enableSmithing";
+	static final String ENABLE_WOODCUTTING = "enableWoodcutting";
 
 	private static final int LAMP_WIDGET = 240;
 	private static final int LAMP_WIDGET_ID = WidgetInfo.PACK(LAMP_WIDGET, 0);
@@ -107,71 +110,76 @@ public class LampLockoutPlugin extends Plugin
 			case ENABLE_ATTACK:
 				updateEnabledSkills(enabled, Skill.ATTACK);
 				break;
-			case ENABLE_DEFENCE:
-				updateEnabledSkills(enabled, Skill.DEFENCE);
-				break;
 			case ENABLE_STRENGTH:
 				updateEnabledSkills(enabled, Skill.STRENGTH);
 				break;
-			case ENABLE_HITPOINTS:
-				updateEnabledSkills(enabled, Skill.HITPOINTS);
+			case ENABLE_DEFENCE:
+				updateEnabledSkills(enabled, Skill.DEFENCE);
 				break;
 			case ENABLE_RANGED:
 				updateEnabledSkills(enabled, Skill.RANGED);
 				break;
-			case ENABLE_PRAYER:
-				updateEnabledSkills(enabled, Skill.PRAYER);
-				break;
 			case ENABLE_MAGIC:
 				updateEnabledSkills(enabled, Skill.MAGIC);
 				break;
-			case ENABLE_COOKING:
-				updateEnabledSkills(enabled, Skill.COOKING);
+			case ENABLE_PRAYER:
+				updateEnabledSkills(enabled, Skill.PRAYER);
 				break;
-			case ENABLE_WOODCUTTING:
-				updateEnabledSkills(enabled, Skill.WOODCUTTING);
+			case ENABLE_HITPOINTS:
+				updateEnabledSkills(enabled, Skill.HITPOINTS);
 				break;
-			case ENABLE_FLETCHING:
-				updateEnabledSkills(enabled, Skill.FLETCHING);
-				break;
-			case ENABLE_FISHING:
-				updateEnabledSkills(enabled, Skill.FISHING);
-				break;
-			case ENABLE_FIREMAKING:
-				updateEnabledSkills(enabled, Skill.FIREMAKING);
-				break;
-			case ENABLE_CRAFTING:
-				updateEnabledSkills(enabled, Skill.CRAFTING);
-				break;
-			case ENABLE_SMITHING:
-				updateEnabledSkills(enabled, Skill.SMITHING);
-				break;
-			case ENABLE_MINING:
-				updateEnabledSkills(enabled, Skill.MINING);
-				break;
-			case ENABLE_HERBLORE:
-				updateEnabledSkills(enabled, Skill.HERBLORE);
-				break;
+			
 			case ENABLE_AGILITY:
 				updateEnabledSkills(enabled, Skill.AGILITY);
 				break;
-			case ENABLE_THIEVING:
-				updateEnabledSkills(enabled, Skill.THIEVING);
-				break;
-			case ENABLE_SLAYER:
-				updateEnabledSkills(enabled, Skill.SLAYER);
+			case ENABLE_CONSTRUCTION:
+				updateEnabledSkills(enabled, Skill.CONSTRUCTION);
 				break;
 			case ENABLE_FARMING:
 				updateEnabledSkills(enabled, Skill.FARMING);
 				break;
-			case ENABLE_RUNECRAFT:
-				updateEnabledSkills(enabled, Skill.RUNECRAFT);
+			case ENABLE_FLETCHING:
+				updateEnabledSkills(enabled, Skill.FLETCHING);
+				break;
+			case ENABLE_HERBLORE:
+				updateEnabledSkills(enabled, Skill.HERBLORE);
 				break;
 			case ENABLE_HUNTER:
 				updateEnabledSkills(enabled, Skill.HUNTER);
 				break;
-			case ENABLE_CONSTRUCTION:
-				updateEnabledSkills(enabled, Skill.CONSTRUCTION);
+			case ENABLE_SAILING:
+				updateEnabledSkills(enabled, Skill.SAILING);
+				break;
+			case ENABLE_SLAYER:
+				updateEnabledSkills(enabled, Skill.SLAYER);
+				break;
+			case ENABLE_THIEVING:
+				updateEnabledSkills(enabled, Skill.THIEVING);
+				break;
+			
+			case ENABLE_COOKING:
+				updateEnabledSkills(enabled, Skill.COOKING);
+				break;
+			case ENABLE_CRAFTING:
+				updateEnabledSkills(enabled, Skill.CRAFTING);
+				break;
+			case ENABLE_FIREMAKING:
+				updateEnabledSkills(enabled, Skill.FIREMAKING);
+				break;
+			case ENABLE_FISHING:
+				updateEnabledSkills(enabled, Skill.FISHING);
+				break;
+			case ENABLE_MINING:
+				updateEnabledSkills(enabled, Skill.MINING);
+				break;
+			case ENABLE_RUNECRAFT:
+				updateEnabledSkills(enabled, Skill.RUNECRAFT);
+				break;
+			case ENABLE_SMITHING:
+				updateEnabledSkills(enabled, Skill.SMITHING);
+				break;
+			case ENABLE_WOODCUTTING:
+				updateEnabledSkills(enabled, Skill.WOODCUTTING);
 				break;
 		}
 	}
@@ -243,6 +251,7 @@ public class LampLockoutPlugin extends Plugin
 		if (config.enableHerblore()) enabledSkills.add(Skill.HERBLORE);
 		if (config.enableAgility()) enabledSkills.add(Skill.AGILITY);
 		if (config.enableThieving()) enabledSkills.add(Skill.THIEVING);
+		if (config.enableSailing()) enabledSkills.add(Skill.SAILING);
 		if (config.enableSlayer()) enabledSkills.add(Skill.SLAYER);
 		if (config.enableFarming()) enabledSkills.add(Skill.FARMING);
 		if (config.enableRunecraft()) enabledSkills.add(Skill.RUNECRAFT);
