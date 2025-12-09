@@ -7,8 +7,8 @@ import net.runelite.api.Client;
 import net.runelite.api.GameState;
 import net.runelite.api.Skill;
 import net.runelite.api.events.WidgetLoaded;
+import net.runelite.api.gameval.InterfaceID;
 import net.runelite.api.widgets.Widget;
-import net.runelite.api.widgets.WidgetInfo;
 import net.runelite.client.callback.ClientThread;
 import net.runelite.client.config.ConfigManager;
 import net.runelite.client.eventbus.Subscribe;
@@ -57,9 +57,6 @@ public class LampLockoutPlugin extends Plugin
 	static final String ENABLE_RUNECRAFT = "enableRunecraft";
 	static final String ENABLE_SMITHING = "enableSmithing";
 	static final String ENABLE_WOODCUTTING = "enableWoodcutting";
-
-	private static final int LAMP_WIDGET = 240;
-	private static final int LAMP_WIDGET_ID = WidgetInfo.PACK(LAMP_WIDGET, 0);
 
 	private static final Map<String, Skill> SKILLS = new HashMap<>();
 
@@ -187,7 +184,7 @@ public class LampLockoutPlugin extends Plugin
 	@Subscribe
 	public void onWidgetLoaded(WidgetLoaded widgetLoaded) {
 		int groupID = widgetLoaded.getGroupId();
-		if (groupID != LAMP_WIDGET)
+		if (groupID != InterfaceID.XPREWARD)
 			return;
 
 		updateInterface();
@@ -198,7 +195,7 @@ public class LampLockoutPlugin extends Plugin
 	}
 
 	private void updateInterface(boolean showAll) {
-		Widget widget = client.getWidget(LAMP_WIDGET_ID);
+		Widget widget = client.getWidget(InterfaceID.Xpreward.UNIVERSE);
 		if (widget == null)
 			return;
 
